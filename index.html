@@ -8,41 +8,230 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>LAYOUT</title>
+    <title>Electro fitness</title>
 </head>
-<h1>GOL</h1>
 
 <body>
-    <header class="ba-header">
-        <div class="container">
-            <a href="" class="ba-logo"></a>
-            <nav>
-                <ul class="ba-menu">
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item1</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item2</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item3</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item4</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="container ba-header">
+            <a href="" class="ba-header-logo"><span>electro</span>fitness</a>
+            <div class="ba-header-wrapper">
+                <nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">home</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">services</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">team</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link active">articles</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">shop</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">plans</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="ba-user">
+                    <i class='fas fa-user'></i>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <section class="ba-section">
+        <section class="ba-fitter">
+            <h1 class="ba-fitter__h1">
+                <span>fitter</span>
+                <span>stronger</span>
+                <span>forever</span>
+            </h1>
+            <a href="" class="ba-fitter__btn">sign up</a>
+        </section>
+        <section class='ba-about'>
             <div class="container">
-
+                <div class="ba-about-wrapper">
+                    <h2 class="ba-about__h2">about us</h2>
+                    <div class="ba-about__text">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid a nostrum ea nemo. Expedita, provident! Sapiente officia libero explicabo quaerat
+                            odit quasi, porro assumenda, optio dicta laboriosam iure voluptatem? Sint iure nam, necessitatibus nulla quis asperiores quod dolorem optio eius deserunt doloremque voluptatibus, illo, quam nesciunt recusandae quia at. Laboriosam,
+                            delectus tempore modi voluptate accusantium in quibusdam eos iste ipsam molestias! Provident esse sed soluta minima hic nam aspernatur quaesed soluta minima hic!</p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid a nostrum ea nemo. Expedita, provident! Sapiente officia libero explicabo quaerat
+                            nulla quis asperiores quod dolorem optio eius, illo, quam nesciunt recusandae quia at. Laboriosam, Lorem ipsum dolor sit?
+                        </p>
+                    </div>
+                </div>
             </div>
+        </section>
+        <section class='ba-join'>
+            <div class="container">
+                <div class="ba-join-wrapper">
+                    <div class="ba-join-opacity__diagonale"></div>
+                    <div class="ba-join-block-text">
+                        <h2 class="ba-join-block-text__h2">join now</h2>
+                        <span class="ba-join-block-text__span">From</span>
+                        <div class="ba-join-block-text__btn">
+                            $29.99
+                        </div>
+                        <p class="ba-join-block-text__text">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid odit quasi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ba-join-opacity__right"></div>
+        </section>
+        <section class='ba-offer'>
+            <div class="container">
+                <div class="ba-offer-wrapper">
+                    <h2 class="ba-offer__h2">about us</h2>
+                    <div class="ba-offer-works">
+                        <div class="ba-offer-work" data-tab="0">
+                            <img src="img/exercise-bike.png" alt="spin">
+                            <p class='ba-offer-work__text'>
+                                spin
+                            </p>
+                        </div>
+                        <div class="ba-offer-work" data-tab="1">
+                            <img src="img/weight.png" alt="strength">
+                            <p class='ba-offer-work__text'>strength</p>
+                        </div>
+                        <div class="ba-offer-work active" data-tab="2">
+                            <img class="ba-offer-work__img" src="img/shoe.png" alt="crossfit">
+                            <p class='ba-offer-work__text'>crossfit</p>
+                        </div>
+                        <div class="ba-offer-work" data-tab="3">
+                            <img src="img/boxing-mannequin.png" alt="mma">
+                            <p class='ba-offer-work__text'>mma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-content">
+                <div class="ba-offer-tab" data-tab-index="0">
+                    <div class="container">
+                        <h3 class="ba-offer-tab__h3">spin</h3>
+                        <p class="ba-offer-tab__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet!</p>
+                    </div>
+                </div>
+                <div class="ba-offer-tab" data-tab-index="1">
+                    <div class="container">
+                        <h3 class="ba-offer-tab__h3">strength</h3>
+                        <p class="ba-offer-tab__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet!</p>
+                    </div>
+                </div>
+                <div class="ba-offer-tab active" data-tab-index="2">
+                    <div class="container">
+                        <h3 class="ba-offer-tab__h3">crossfit</h3>
+                        <p class="ba-offer-tab__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet!</p>
+                    </div>
+                </div>
+                <div class="ba-offer-tab" data-tab-index="3">
+                    <div class="container">
+                        <h3 class="ba-offer-tab__h3">mma</h3>
+                        <p class="ba-offer-tab__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet Repellat quo consequatur sit fuga ab aliquam aperiam aut perspiciatis tenetur eveniet!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='ba-meet'>
+            <h2 class="ba-meet__h2">meet the team</h2>
+            <div class="ba-meet-wrapper">
+                <div class="ba-meet-wrapper__opacity">
+                    <div class="container ba-meet-block">
+                        <div class="ba-meet__text">
+                            <span>Laura</span>
+                            <p>TEACHES: YOGA</p>
+                            <p>LOVES: CHRISTMAS</p>
+                            <img src="img/yoga-icon.png" alt="YOGA">
+                        </div>
+                        <div class="ba-meet__text">
+                            <span>Sarah</span>
+                            <p>TEACHES: strength</p>
+                            <p>LOVES: paris</p>
+                            <img src="img/weight-icon.png" alt="strength">
+                        </div>
+                        <div class="ba-meet__text">
+                            <span>Eva</span>
+                            <p>TEACHES: boxing</p>
+                            <p>LOVES: dogs</p>
+                            <img src="img/gloves-icon.png" alt="boxing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='ba-articles'>
+            <div class="container">
+                <div class="ba-articles-wrapper">
+                    <h2 class="ba-articles__h2">RECENT ARTICLES</h2>
+                    <div class="ba-articles__row">
+                        <div class="ba-article-left">
+                            <div class="ba-articles-left__row">
+                                <div class="ba-aticle-1 ba-aticle">
+                                    <div class="ba-aticle-1__text ba-aticle__text">
+                                        <h3>10 FOODS TO HELP WEIGHT LOSS</h3>
+                                        <p><time>29/06/2019</time></p>
+                                    </div>
+                                </div>
+                                <div class="ba-aticle-2 ba-aticle">
+                                    <div class="ba-aticle-2__text ba-aticle__text">
+                                        <h3>reasons you’re not losing weight</h3>
+                                        <p><time>29/06/2019</time></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ba-articles-left__row">
+                                <div class="ba-aticle-3 ba-aticle">
+                                    <div class="ba-aticle-3__text ba-aticle__text">
+                                        <h3>best yoga excercises</h3>
+                                        <p><time>29/06/2019</time></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ba-article-right">
+                            <div class="ba-articles-right__row">
+                                <div class="ba-aticle-4 ba-aticle">
+                                    <div class="ba-aticle-4__text ba-aticle__text">
+                                        <h3>climbing rope for bigger arms</h3>
+                                        <p><time>29/06/2019</time></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='ba-shop'>
+            <div class="ba-shop-opacity__left"></div>
+            <div class="container">
+                <div class="ba-shop-wrapper">
+
+                    <div class="ba-shop-block-text">
+                        <h2 class="ba-shop-block-text__h2">shop</h2>
+                        <span class="ba-shop-block-text__img"><img src="img/shop-icon.png" alt=""></span>
+                        <p class="ba-shop-block-text__text">Lorem, ipsum dolor odit dolor odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid odit quasi</p>
+
+                        <div class="ba-shop-block-text__btn">
+                            visit
+                        </div>
+                    </div>
+                    <div class="ba-shop-opacity__diagonale"></div>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer class="ba-footer">
         <div class="container">
             <div class="ba-row">
-                <div class="ba-col-4">1</div>
-                <div class="ba-col-4">2</div>
-                <div class="ba-col-4">3</div>
+                <div class="ba-col-4"></div>
+                <div class="ba-col-4"></div>
+                <div class="ba-col-4"></div>
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='js/app.js'></script>
 </body>
 
 </html>
