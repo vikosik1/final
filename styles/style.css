@@ -599,10 +599,8 @@ h6 {
     justify-content: flex-start; }
   .ba-shop-block-text {
     width: 460px;
-    opacity: .99;
-    padding-top: 120px;
-    padding-bottom: 150px;
-    padding: 120px 50px 150px; }
+    opacity: .9;
+    padding: 120px 15px 150px 15px; }
     .ba-shop-block-text__h2 {
       font-size: 2.8rem;
       font-family: "AutumninNovember";
@@ -632,7 +630,7 @@ h6 {
   background-color: #fff;
   text-align: center; }
   .ba-packages-wrapper {
-    padding: 75px 125px 110px 100px; }
+    padding: 75px 0px 110px 0px; }
   .ba-packages__h2 {
     display: inline-block;
     font-size: 2.6rem;
@@ -669,12 +667,16 @@ h6 {
     position: relative; }
     @media only screen and (max-width: 830px) {
       .ba-packages__block {
-        width: 300px; } }
+        width: 300px;
+        margin-left: 0px; } }
     .ba-packages__block.active {
       transform: scale(1.1, 1.1);
       border-color: #fff;
       border: 10px solid #7cf2da;
       background-color: #fff; }
+      @media only screen and (max-width: 830px) {
+        .ba-packages__block.active {
+          transform: none; } }
     .ba-packages__block_h3 {
       font-size: 2.5rem; }
       .ba-packages__block_h3:after {

@@ -698,10 +698,8 @@ h6 {
     }
     &-block-text {
         width: 460px;
-        opacity: .99;
-        padding-top: 120px;
-        padding-bottom: 150px;
-        padding: 120px 50px 150px;
+        opacity: .9;
+        padding: 120px 15px 150px 15px;
         &__h2 {
             font-size: 2.8rem;
             font-family: $AinN;
@@ -738,7 +736,7 @@ h6 {
     background-color: $white;
     text-align: center;
     &-wrapper {
-        padding: 75px 125px 110px 100px;
+        padding: 75px 0px 110px 0px;
     }
     &__h2 {
         display: inline-block;
@@ -779,12 +777,16 @@ h6 {
         position: relative;
         @media only screen and (max-width: 830px) {
             width: 300px;
+            margin-left: 0px;
         }
         &.active {
             transform: scale(1.1, 1.1);
             border-color: $white;
             border: 10px solid $blue;
             background-color: $white;
+            @media only screen and (max-width: 830px) {
+                transform: none;
+            }
         }
         &_h3 {
             font-size: 2.5rem;
