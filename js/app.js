@@ -61,6 +61,7 @@ $(document).ready(function() {
     $('.ba-header-menu-btn').on('click', function() {
         $('.ba-menu').toggle();
         $('.ba-header-menu-btn i').toggleClass('fa-times')
+        $(this).toggleClass('ba-header-menu-btn_position')
     });
 
 
