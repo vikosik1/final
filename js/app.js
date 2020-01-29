@@ -64,7 +64,5 @@ $(document).ready(function() {
         $(this).toggleClass('ba-header-menu-btn_position')
     });
 
-
-
-
+    //----END---menu dropdown ----------
 });
