@@ -116,6 +116,11 @@ h6 {
         border: 0;
         font-size: 1.5em;
         padding-right: 15px; } }
+    .ba-header-menu-btn_position {
+      position: relative;
+      top: 45px;
+      z-index: 10;
+      left: 20px; }
 
 .ba-fitter {
   margin: 0 auto;
@@ -318,7 +323,7 @@ h6 {
     transition: 1s; }
     @media only screen and (max-width: 830px) {
       .ba-offer-work {
-        margin-bottom: 25px; } }
+        margin-bottom: 45px; } }
     .ba-offer-work:hover {
       transform: scale(1.1, 1.1);
       cursor: pointer; }
@@ -662,6 +667,9 @@ h6 {
     margin-left: 15px;
     margin-bottom: 40px;
     position: relative; }
+    @media only screen and (max-width: 830px) {
+      .ba-packages__block {
+        width: 300px; } }
     .ba-packages__block.active {
       transform: scale(1.1, 1.1);
       border-color: #fff;
@@ -765,6 +773,11 @@ h6 {
       position: absolute;
       right: 0;
       padding-right: 100px; }
+      @media only screen and (max-width: 868px) {
+        .ba-contact-mail-wrapper {
+          width: 100%;
+          position: static;
+          padding: 0 40px; } }
     .ba-contact-mail__h2 {
       font-size: 1.2rem;
       padding: 70px 0 20px 0;
@@ -793,7 +806,8 @@ h6 {
       border-right: none;
       border-bottom: 1px solid #7cf2da;
       letter-spacing: 0.4em;
-      outline: none; }
+      outline: none;
+      display: block; }
       .ba-contact-mail__massege::placeholder {
         color: #7cf2da; }
     .ba-contact-mail__send {
