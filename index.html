@@ -10,26 +10,30 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Electro fitness</title>
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="container ba-header">
             <a href="" class="ba-header-logo"><span>electro</span>fitness</a>
             <div class="ba-header-wrapper">
                 <nav>
-                    <ul class="ba-menu">
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">home</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">services</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">team</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link active">articles</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">shop</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">plans</a></li>
-                        <li class="ba-menu__item"><a href="" class="ba-menu__link">contact</a></li>
+                    <ul class="ba-menu" id="ba-menu">
+                        <li class="ba-menu__item active"><a href="#home" class="ba-menu__link">home</a></li>
+                        <li class="ba-menu__item"><a href="#services" class="ba-menu__link">services</a></li>
+                        <li class="ba-menu__item"><a href="#team" class="ba-menu__link">team</a></li>
+                        <li class="ba-menu__item"><a href="#articles" class="ba-menu__link">articles</a></li>
+                        <li class="ba-menu__item"><a href="#shop" class="ba-menu__link">shop</a></li>
+                        <li class="ba-menu__item"><a href="#plans" class="ba-menu__link">plans</a></li>
+                        <li class="ba-menu__item"><a href="#contact" class="ba-menu__link">contact</a></li>
                     </ul>
                 </nav>
+                <button class='ba-header-menu-btn' aria-label='show menu'>
+                    <i class='fas fa-bars'></i>
+                </button>
                 <div class="ba-user">
                     <i class='fas fa-user'></i>
                 </div>
@@ -45,11 +49,11 @@
             </h1>
             <a href="" class="ba-fitter__btn">sign up</a>
         </section>
-        <section class='ba-about'>
+        <section class='ba-about' id="services">
             <div class="container">
                 <div class="ba-about-wrapper">
-                    <h2 class="ba-about__h2">about us</h2>
-                    <div class="ba-about__text">
+                    <h2 class="ba-about__h2 wow bounceInLeft animated">about us</h2>
+                    <div class="ba-about__text wow bounceInRight">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid a nostrum ea nemo. Expedita, provident! Sapiente officia libero explicabo quaerat
                             odit quasi, porro assumenda, optio dicta laboriosam iure voluptatem? Sint iure nam, necessitatibus nulla quis asperiores quod dolorem optio eius deserunt doloremque voluptatibus, illo, quam nesciunt recusandae quia at. Laboriosam,
@@ -65,23 +69,23 @@
         <section class='ba-join'>
             <div class="container">
                 <div class="ba-join-wrapper">
-                    <div class="ba-join-opacity__diagonale"></div>
+
                     <div class="ba-join-block-text">
-                        <h2 class="ba-join-block-text__h2">join now</h2>
-                        <span class="ba-join-block-text__span">From</span>
-                        <div class="ba-join-block-text__btn">
+                        <h2 class="ba-join-block-text__h2 wow bounceInDown">join now</h2>
+                        <span class="ba-join-block-text__span wow bounceInDown">From</span>
+                        <div class="ba-join-block-text__btn wow bounceInDown delay-1s">
                             $29.99
                         </div>
-                        <p class="ba-join-block-text__text">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid odit quasi</p>
+                        <p class="ba-join-block-text__text wow bounceInDown">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam odit at corrupti porro provident, quas reprehenderit, exercitationem beatae eius, voluptas aliquid odit quasi</p>
                     </div>
                 </div>
             </div>
-            <div class="ba-join-opacity__right"></div>
+
         </section>
         <section class='ba-offer'>
             <div class="container">
                 <div class="ba-offer-wrapper">
-                    <h2 class="ba-offer__h2">about us</h2>
+                    <h2 class="ba-offer__h2 wow jackInTheBox">WHAT WE OFFER</h2>
                     <div class="ba-offer-works">
                         <div class="ba-offer-work" data-tab="0">
                             <img src="img/exercise-bike.png" alt="spin">
@@ -131,24 +135,24 @@
                 </div>
             </div>
         </section>
-        <section class='ba-meet'>
+        <section class='ba-meet' id="team">
             <h2 class="ba-meet__h2">meet the team</h2>
             <div class="ba-meet-wrapper">
                 <div class="ba-meet-wrapper__opacity">
                     <div class="container ba-meet-block">
-                        <div class="ba-meet__text">
+                        <div class="ba-meet__text wow bounceInLeft">
                             <span>Laura</span>
                             <p>TEACHES: YOGA</p>
                             <p>LOVES: CHRISTMAS</p>
                             <img src="img/yoga-icon.png" alt="YOGA">
                         </div>
-                        <div class="ba-meet__text">
+                        <div class="ba-meet__text wow bounceInDown">
                             <span>Sarah</span>
                             <p>TEACHES: strength</p>
                             <p>LOVES: paris</p>
                             <img src="img/weight-icon.png" alt="strength">
                         </div>
-                        <div class="ba-meet__text">
+                        <div class="ba-meet__text wow bounceInRight">
                             <span>Eva</span>
                             <p>TEACHES: boxing</p>
                             <p>LOVES: dogs</p>
@@ -158,7 +162,7 @@
                 </div>
             </div>
         </section>
-        <section class='ba-articles'>
+        <section class='ba-articles' id="articles">
             <div class="container">
                 <div class="ba-articles-wrapper">
                     <h2 class="ba-articles__h2">RECENT ARTICLES</h2>
@@ -201,7 +205,7 @@
                 </div>
             </div>
         </section>
-        <section class='ba-shop'>
+        <section class='ba-shop' id="shop">
             <div class="ba-shop-opacity__left"></div>
             <div class="container">
                 <div class="ba-shop-wrapper">
@@ -218,19 +222,116 @@
                     <div class="ba-shop-opacity__diagonale"></div>
                 </div>
             </div>
-
+        </section>
+        <section class='ba-packages' id="plans">
+            <div class="container">
+                <div class="ba-packages-wrapper">
+                    <h2 class="ba-packages__h2">packages</h2>
+                    <div class="ba-packages-blocks">
+                        <div class="ba-packages__block">
+                            <h3 class="ba-packages__block_h3">SILVER</h3>
+                            <p class="ba-packages__block_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, odio.
+                            </p>
+                            <p class="ba-packages__block_cost">$29.99</p>
+                            <a class="ba-packages__block_btn" href="">view more</a>
+                        </div>
+                        <div class="ba-packages__block active" id="ba-packages__block">
+                            <div class="ribbon"><span>best</span></div>
+                            <h3 class="ba-packages__block_h3">gold</h3>
+                            <p class="ba-packages__block_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, odio.
+                            </p>
+                            <p class="ba-packages__block_cost">$29.99</p>
+                            <a class="ba-packages__block_btn" href="">view more</a>
+                        </div>
+                        <div class="ba-packages__block">
+                            <h3 class="ba-packages__block_h3">platinum</h3>
+                            <p class="ba-packages__block_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, odio.
+                            </p>
+                            <p class="ba-packages__block_cost">$29.99</p>
+                            <a class="ba-packages__block_btn" href="">view more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='ba-contact' id="contact">
+            <div class="ba-contact-mail">
+                <div class="ba-contact-mail-wrapper">
+                    <h2 class="ba-contact-mail__h2">GET IN TOUCH</h2>
+                    <p class="ba-contact-mail__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, tenetur!</p>
+                    <form action="" class="ba-contact-mail__form">
+                        <input type="text" placeholder="name" class="ba-contact-mail__text" required="required">
+                        <input type="email" placeholder="email" class="ba-contact-mail__email" required="required">
+                        <textarea name="text" class="ba-contact-mail__massege" cols="35" rows="10" placeholder="messege" required="required"></textarea>
+                        <button class="ba-contact-mail__send">send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="ba-contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1286.5077387797817!2d36.236390762137546!3d50.0063554734471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e1!3m2!1sru!2sua!4v1580239615988!5m2!1sru!2sua"
+                    frameborder="0" style="border:0;" allowfullscreen="" class="ba-contact-map__google"></iframe>
+            </div>
+        </section>
+        <section class="ba-line">
+            <div class="ba-line-wrapper">
+                <div class="container">
+                    <p class="ba-line__p">sign up for the newsletter for more news
+                        <a href="" class="ba-line__p_a">view more</a>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer class="ba-footer">
-        <div class="container">
+    <footer>
+        <div class="container ba-footer">
+            <a href="" class="ba-footer-logo"><span>electro</span>fitness</a>
+            <div class="ba-footer-wrapper">
+                <nav>
+                    <ul class="ba-footer-menu">
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">home</a></li>
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">services</a></li>
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">team</a></li>
+                        <li class="ba-footer-menu__item active"><a href="" class="ba-footer-menu__link">articles</a></li>
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">shop</a></li>
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">plans</a></li>
+                        <li class="ba-footer-menu__item"><a href="" class="ba-footer-menu__link">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ba-footer-user">
+                <i class='fas fa-cloud'></i>
+                <i class='fas fa-coffee'></i>
+                <i class='fas fa-cogs'></i>
+                <i class='fas fa-coins'></i>
+            </div>
+        </div>
+        <div class="container ba-faq">
             <div class="ba-row">
-                <div class="ba-col-4"></div>
-                <div class="ba-col-4"></div>
-                <div class="ba-col-4"></div>
+                <div class="ba-col-8">
+                    <p class="ba-faq__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debisit ametipsum dolor, sit amet consectetur adipisicing elit. Debisit amet consectetur adipisicing elit. Debitis nisi cumque sapiente saepe adipisci perspiciatis voluptatum
+                        ex excepturi maxime voluptate.</p>
+                </div>
+                <div class="ba-col-2">
+                    <ul class="ba-faq-menu">
+                        <li class="ba-faq-menu__item"><a href="" class="ba-faq-menu__link">faq</a></li>
+                        <li class="ba-faq-menu__item"><a href="#services" class="ba-faq-menu__link">services</a></li>
+                        <li class="ba-faq-menu__item"><a href="" class="ba-faq-menu__link">team</a></li>
+                        <li class="ba-faq-menu__item active"><a href="#articles" class="ba-faq-menu__link">articles</a></li>
+                    </ul>
+                </div>
+                <div class="ba-col-2">
+                    <ul class="ba-faq-menu">
+                        <li class="ba-faq-menu__item"><a href="#home" class="ba-faq-menu__link">home</a></li>
+                        <li class="ba-faq-menu__item"><a href="#services" class="ba-faq-menu__link">services</a></li>
+                        <li class="ba-faq-menu__item"><a href="#team" class="ba-faq-menu__link">team</a></li>
+                        <li class="ba-faq-menu__item"><a href="#contact" class="ba-faq-menu__link">contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
     <script src='js/app.js'></script>
 </body>
 

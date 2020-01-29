@@ -42,6 +42,8 @@ h6 {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
     &-logo {
         font-size: 1.357rem;
         letter-spacing: 0.23em;
@@ -54,16 +56,41 @@ h6 {
         align-items: center;
         display: flex;
         justify-content: space-between;
+        position: relative;
         .ba-menu {
             list-style-type: none;
             display: flex;
             align-items: center;
-            position: relative;
+            @media only screen and (max-width: 930px) {
+                display: none;
+                flex-direction: column;
+                margin: 0;
+                padding: 15px 10px 15px 40px;
+                list-style: none;
+                position: absolute;
+                left: -150px;
+                width: 210px;
+                top: 35px;
+                background-color: black;
+                border: 3px solid $blue;
+                z-index: 5;
+            }
             &__item {
                 padding-right: 30px;
-                transition: .4s;
-                &:hover {
-                    transform: scaleY(1.4);
+                overflow: hidden;
+                @media only screen and (max-width: 930px) {
+                    padding-top: 15px;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $blue;
+                    margin-top: 5px;
+                }
+                &.active {
+                    color: $blue;
                     &:after {
                         content: '';
                         display: block;
@@ -71,15 +98,27 @@ h6 {
                         height: 2px;
                         background-color: $blue;
                         margin-top: 5px;
+                        transition: .4s;
+                    }
+                }
+                &:hover {
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $blue;
+                        margin-top: 5px;
+                        transition: .4s;
                     }
                 }
             }
             &__link {
                 color: inherit;
                 letter-spacing: 0.18em;
-                &:hover {
-                    color: $blue;
-                }
+                // &:hover {
+                //     color: $blue;
+                // }
             }
         }
         // #ba-user {
@@ -103,6 +142,20 @@ h6 {
             }
         }
     }
+    &-menu {
+        &-btn {
+            display: none;
+            outline: none;
+            @media only screen and (max-width: 930px) {
+                background-color: $black;
+                display: block;
+                color: $white;
+                border: 0;
+                font-size: 1.5em;
+                padding-right: 15px;
+            }
+        }
+    }
 }
 
 .ba-fitter {
@@ -114,6 +167,7 @@ h6 {
     background-color: $black;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     &__h1 {
         padding-top: 200px;
         span {
@@ -123,6 +177,10 @@ h6 {
                 font-size: 6.7rem;
                 letter-spacing: 0.18em;
                 line-height: 0.69;
+                @media only screen and (max-width: 500px) {
+                    font-size: 4.3rem;
+                    line-height: 1;
+                }
             }
             &:nth-child(2) {
                 color: $rose;
@@ -132,12 +190,18 @@ h6 {
                 letter-spacing: -20px;
                 position: relative;
                 left: -20px;
+                @media only screen and (max-width: 500px) {
+                    font-size: 2.9rem;
+                }
             }
             &:nth-child(3) {
                 color: $white;
                 font-size: 4.5rem;
                 line-height: 1.119;
                 letter-spacing: 0.24em;
+                @media only screen and (max-width: 500px) {
+                    font-size: 3rem;
+                }
             }
         }
     }
@@ -148,6 +212,9 @@ h6 {
         color: $white;
         padding: .4em 3em;
         border: 3px solid $blue;
+        &:hover {
+            box-shadow: 0px 0px 5px 0px;
+        }
     }
 }
 
@@ -156,6 +223,9 @@ h6 {
     text-align: center;
     &-wrapper {
         padding: 75px 125px 110px 100px;
+        @media only screen and (max-width: 830px) {
+            padding: 75px 15px 110px 15px;
+        }
     }
     &__h2 {
         display: inline-block;
@@ -163,6 +233,9 @@ h6 {
         letter-spacing: 0.29em;
         color: $black;
         text-align: center;
+        @media only screen and (max-width: 830px) {
+            font-size: 1.75rem;
+        }
         &:after {
             content: '';
             display: block;
@@ -188,49 +261,56 @@ h6 {
     background-color: $black;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: flex-end;
-    .container {
-        margin: 0;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 200%;
+        background-color: RGBA(0, 0, 0, .9);
+        transform: skewX(15deg);
+        right: -150%;
     }
     &-wrapper {
         display: flex;
         justify-content: flex-end;
-    }
-    &-opacity__diagonale {
-        width: 200px;
-        opacity: .9;
-        background-image: linear-gradient(to right top, transparent 50%, #000 50%);
-    }
-    &-opacity__right {
-        width: calc((100vw - 1170px)/2);
-        background-color: #000;
-        opacity: .9;
-        @media screen and (max-width: 1169px) {
-            width: 0;
+        @media only screen and (max-width: 830px) {
+            justify-content: center;
         }
     }
     &-block-text {
         width: 460px;
-        background-color: #000;
-        opacity: .9;
+        opacity: .99;
         padding-top: 120px;
         padding-bottom: 150px;
         padding: 120px 50px 150px;
+        @media only screen and (max-width: 830px) {
+            width: 100%;
+        }
         &__h2 {
             font-size: 2.8rem;
             color: $white;
             letter-spacing: 0.29em;
             display: block;
+            @media only screen and (max-width: 830px) {
+                font-size: 1.75rem;
+            }
         }
         &__span {
             font-size: 2.8rem;
             font-family: $AinN;
             color: $rose;
-            //   line-height: 1.8rem;
             position: relative;
             top: 20px;
             display: block;
+            @media only screen and (max-width: 830px) {
+                font-size: 1.75rem;
+            }
         }
         &__btn {
             font-size: 2.6rem;
@@ -240,7 +320,11 @@ h6 {
             margin: 15px 0 40px 0;
             padding: 20px 50px;
             border: 10px solid $blue;
-            //text-align: center;
+            @media only screen and (max-width: 830px) {
+                font-size: 1.75rem;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
         }
         &__text {
             font-size: 0.75rem;
@@ -263,6 +347,9 @@ h6 {
         letter-spacing: 0.29em;
         color: $black;
         text-align: center;
+        @media only screen and (max-width: 830px) {
+            font-size: 1.75rem;
+        }
         &:after {
             content: '';
             display: block;
@@ -278,6 +365,10 @@ h6 {
         color: $black;
         font-size: 1.5rem;
         letter-spacing: 0.29em;
+        @media only screen and (max-width: 830px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &-work {
         width: 240px;
@@ -291,8 +382,12 @@ h6 {
         position: relative;
         border: 10px solid transparent;
         transition: 1s;
+        @media only screen and (max-width: 830px) {
+            margin-bottom: 25px;
+        }
         &:hover {
             transform: scale(1.1, 1.1);
+            cursor: pointer;
         }
         &.active {
             border: 10px solid $blue;
@@ -328,7 +423,7 @@ h6 {
         color: $white;
         text-align: center;
         display: none;
-        padding-bottom: 30px;
+        padding: 0 15px 30px 15px;
         &__h3 {
             font-size: 1.4rem;
             letter-spacing: 0.29em;
@@ -378,6 +473,8 @@ h6 {
         background-image: url(../img/meet-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
+        background-position: center;
         padding-top: 450px;
         &__opacity {
             background-color: $black;
@@ -395,6 +492,9 @@ h6 {
         letter-spacing: 0.29em;
         color: $black;
         text-align: center;
+        @media only screen and (max-width: 830px) {
+            font-size: 1.75rem;
+        }
         &:after {
             content: '';
             display: block;
@@ -409,6 +509,9 @@ h6 {
         letter-spacing: 0.29em;
         padding: 30px 0 20px 0;
         line-height: 2em;
+        @media only screen and (max-width: 830px) {
+            font-size: 0.75rem;
+        }
         span {
             color: $rose;
             font-family: $AinN;
@@ -445,6 +548,10 @@ h6 {
         display: flex;
         justify-content: space-between;
         color: $black;
+        @media only screen and (max-width: 1169px) {
+            flex-direction: column;
+            align-items: center;
+        }
         h3 {
             font-size: 1rem;
             letter-spacing: 0.29em;
@@ -462,6 +569,10 @@ h6 {
         &__row {
             display: flex;
             justify-content: space-between;
+            @media only screen and (max-width: 830px) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
     .ba-aticle {
@@ -473,6 +584,10 @@ h6 {
             background-image: url(../img/article1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
+            @media only screen and (max-width: 830px) {
+                margin-bottom: 30px;
+            }
             &__text {
                 background-color: #fff;
                 width: 300px;
@@ -488,6 +603,7 @@ h6 {
             background-image: url(../img/article2.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             &__text {
                 background-color: #fff;
                 width: 300px;
@@ -495,18 +611,21 @@ h6 {
                 position: absolute;
                 bottom: 40px;
                 right: 0px;
-                // h3 {
-                //     text-align: right;
-                // }
             }
         }
         &-3 {
             width: 767px;
             height: 365px;
             margin-top: 37px;
+            margin-bottom: 37px;
             background-image: url(../img/article3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
+            @media only screen and (max-width: 830px) {
+                width: 100%;
+                padding: 0 15px;
+            }
             &__text {
                 background-color: #fff;
                 width: 300px;
@@ -514,6 +633,9 @@ h6 {
                 position: absolute;
                 bottom: 0px;
                 left: 40px;
+                @media only screen and (max-width: 830px) {
+                    width: 200px;
+                }
             }
         }
         &-4 {
@@ -522,6 +644,10 @@ h6 {
             background-image: url(../img/article4.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
+            @media only screen and (max-width: 830px) {
+                height: 365px;
+            }
             &__text {
                 background-color: #fff;
                 width: 300px;
@@ -534,7 +660,7 @@ h6 {
         &__text {
             transition: .5s;
         }
-        &__text:hover {
+        &:hover .ba-aticle__text {
             left: 0;
             right: 0;
             bottom: 0;
@@ -559,32 +685,28 @@ h6 {
     background-color: $black;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: flex-start;
-    .container {
-        margin: 0;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 200%;
+        background-color: RGBA(0, 0, 0, .5);
+        transform: skewX(-30deg);
+        left: -150%;
     }
     &-wrapper {
         display: flex;
         justify-content: flex-start;
     }
-    &-opacity__diagonale {
-        width: 200px;
-        opacity: .77;
-        background-image: linear-gradient(to left top, transparent 50%, #000 50%);
-    }
-    &-opacity__left {
-        width: calc((100vw - 1170px)/2);
-        background-color: #000;
-        opacity: .77;
-        @media screen and (max-width: 1169px) {
-            width: 0;
-        }
-    }
     &-block-text {
         width: 460px;
-        background-color: #000;
-        opacity: .77;
+        opacity: .99;
         padding-top: 120px;
         padding-bottom: 150px;
         padding: 120px 50px 150px;
@@ -606,7 +728,9 @@ h6 {
             margin: 15px 0 40px 0;
             padding: 20px 50px;
             border: 10px solid $blue;
-            //text-align: center;
+            &:hover {
+                box-shadow: 0px 0px 5px 0px;
+            }
         }
         &__text {
             font-size: 0.75rem;
@@ -614,6 +738,364 @@ h6 {
             line-height: 2.7em;
             letter-spacing: 0.29em;
             padding: 0 0px
+        }
+    }
+}
+
+.ba-packages {
+    background-color: $white;
+    text-align: center;
+    &-wrapper {
+        padding: 75px 125px 110px 100px;
+    }
+    &__h2 {
+        display: inline-block;
+        font-size: 2.6rem;
+        letter-spacing: 0.29em;
+        color: $black;
+        text-align: center;
+        @media only screen and (max-width: 830px) {
+            font-size: 1.75rem;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 5px;
+            background-color: $blue;
+            margin: 35px 0 95px calc(50% - 60px);
+        }
+    }
+    &-blocks {
+        display: flex;
+        justify-content: space-around;
+        @media only screen and (max-width: 867px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__block {
+        background-color: #f4f3f3;
+        width: 345px;
+        height: 530px;
+        padding: 45px 0px 55px 0px;
+        color: $black;
+        letter-spacing: 0.29em;
+        transition: .5s;
+        margin-left: 15px;
+        margin-bottom: 40px;
+        position: relative;
+        // &.active {
+        //     margin: -40px;
+        //     border: 10px solid $blue;
+        //     height: 640px;
+        // }
+        &.active {
+            transform: scale(1.1, 1.1);
+            border-color: $white;
+            border: 10px solid $blue;
+            background-color: $white;
+        }
+        &_h3 {
+            font-size: 2.5rem;
+            &:after {
+                content: '';
+                display: block;
+                width: 120px;
+                height: 3px;
+                background-color: $black;
+                margin: 35px 0 55px calc(50% - 60px);
+            }
+        }
+        &_p {
+            font-size: 0.6rem;
+        }
+        &_cost {
+            font-size: 2.25rem;
+            padding-bottom: 40px;
+            &:before {
+                content: '';
+                display: block;
+                width: 120px;
+                height: 3px;
+                background-color: $black;
+                margin: 55px 0 35px calc(50% - 60px);
+            }
+        }
+        &_btn {
+            background-color: $black;
+            color: $white;
+            width: 170px;
+            height: 50px;
+            font-size: 0.75rem;
+            padding: 10px 20px;
+        }
+        // sale label
+        &.active {
+            .ribbon {
+                left: -15px;
+                top: -15px;
+            }
+        }
+        .ribbon {
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 75px;
+            text-align: right;
+        }
+        .ribbon span {
+            font-size: 10px;
+            font-weight: bold;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 20px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            width: 100px;
+            display: block;
+            background: $rose;
+            //   background: linear-gradient(#F27CD8 0%, #F27CD8 100%);
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 19px;
+            left: -21px;
+        }
+        .ribbon span:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #F27CD8;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #F27CD8;
+        }
+        .ribbon span:after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid #F27CD8;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #F27CD8;
+        }
+        // END sale label
+    }
+}
+
+.ba-contact {
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 868px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &-mail {
+        background-color: $black;
+        position: relative;
+        width: 50%;
+        height: 700px;
+        @media only screen and (max-width: 868px) {
+            width: 100%;
+        }
+        &-wrapper {
+            width: 400px;
+            height: 500px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        &__h2 {
+            font-size: 1.2rem;
+            padding: 70px 0 20px 0;
+            letter-spacing: 0.29em;
+        }
+        &__p {
+            font-size: .75rem;
+            padding-bottom: 30px;
+            letter-spacing: 0.29em;
+        }
+        input {
+            background-color: $black;
+            width: 100%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid $blue;
+            padding: 0 0 15px 0;
+            margin-bottom: 40px;
+            letter-spacing: 0.4em;
+            outline: none;
+            &::placeholder {
+                color: $blue;
+            }
+        }
+        &__text {}
+        &__email {}
+        &__massege {
+            background-color: $black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid $blue;
+            letter-spacing: 0.4em;
+            outline: none;
+            &::placeholder {
+                color: $blue;
+            }
+        }
+        &__send {
+            background-color: $white;
+            font-size: 0.75rem;
+            letter-spacing: 0.4em;
+            margin-top: 30px;
+            padding: 10px 35px;
+            color: $black;
+            border: 0;
+        }
+    }
+    &-map {
+        width: 50%;
+        background-color: $white;
+        height: 700px;
+        @media only screen and (max-width: 868px) {
+            width: 100%;
+        }
+        &__google {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.ba-line {
+    &-wrapper {
+        background-color: $blue;
+        text-align: center;
+    }
+    &__p {
+        font-size: 0.75rem;
+        color: $black;
+        padding: 40px 0px;
+        &_a {
+            background-color: $black;
+            margin-left: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 0.4em;
+            padding: 12px 25px;
+            color: $white;
+            @media only screen and (max-width: 561px) {
+                display: block;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $white;
+}
+
+.ba-footer {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 15px 50px 15px;
+    @media only screen and (max-width: 1170px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &-wrapper {
+        @media only screen and (max-width: 1170px) {
+            padding: 30px 15px;
+        }
+    }
+    &-logo {
+        font-size: 1.357rem;
+        letter-spacing: 0.23em;
+        color: $blue;
+        span {
+            color: $rose;
+        }
+    }
+    &-menu {
+        display: flex;
+        justify-content: space-around;
+        @media only screen and (max-width: 579px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__link {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            padding-left: 20px;
+            color: $black;
+            transition: .4s;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    &-user {
+        display: flex;
+        justify-content: space-around;
+        color: $black;
+        .fas {
+            font-size: 1.4rem;
+            padding-left: 20px;
+            transition: .6s;
+            &:hover {
+                color: $rose;
+            }
+        }
+    }
+}
+
+.ba-faq {
+    padding: 0px 15px 0px 15px;
+    .ba-row {
+        @media only screen and (max-width: 1170px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .ba-col-2,
+        .ba-col-8 {
+            @media only screen and (max-width: 930px) {
+                width: 90%;
+            }
+        }
+    }
+    &__p {
+        color: $black;
+        padding-bottom: 80px;
+        @media only screen and (max-width: 1170px) {
+            padding-bottom: 40px;
+        }
+    }
+    &-menu {
+        text-align: right;
+        padding-bottom: 30px;
+        @media only screen and (max-width: 1170px) {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        &__link {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            line-height: 1.5em;
+            color: $black;
+            transition: .4s;
+            &:hover {
+                color: $rose;
+            }
         }
     }
 }
